@@ -1,0 +1,15 @@
+.container {
+  margin-inline: auto;
+  max-width: 100%;
+  width: $baseWidth;
+  padding-inline: 60px;
+
+  @include breakpoint(xl) {
+    padding-inline: 30px;
+  }
+
+  @include breakpoint(sm) {
+    padding-inline: 16px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,26 @@
+.u-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.u-center {
+  align-items: center;
+}
+.u-between {
+  justify-content: space-between;
+}
+.u-t-center {
+  text-align: center;
+}
+.u-center {
+  justify-content: center;
+}
+.u-fullheight {
+  height: 100vh;
+}
+.u-fullwidth {
+  width: 100vw;
+}
+
+.card {
+  background: var(--custom-white);
+}
