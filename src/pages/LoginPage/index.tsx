@@ -21,13 +21,10 @@ const mockUsers: User[] = [
   },
 ]
 
-const Login = () => {
+const LoginPage = () => {
   const dispatch = useAppDispatch()
   const { goBack } = useHistory()
-  const {
-    control,
-    handleSubmit,
-  } = useForm<LoginFormValues>({
+  const { control, handleSubmit } = useForm<LoginFormValues>({
     resolver: zodResolver(loginSchema),
     defaultValues: {
       username: 'admin',
@@ -52,13 +49,16 @@ const Login = () => {
   }
 
   return (
-    <div className='login-page'>
+    <div className="login-page">
       <div className="container">
-        <Row justify='center'>
+        <Row justify="center">
           <Col span={16}>
-            <Row justify='center'>
+            <Row justify="center">
               <Col sm={24} md={12}>
-                <LoginForm control={control} onSubmit={handleSubmit(onSubmit)} />
+                <LoginForm
+                  control={control}
+                  onSubmit={handleSubmit(onSubmit)}
+                />
               </Col>
               <Col sm={0} md={12}>
                 <LoginAds />
@@ -66,10 +66,9 @@ const Login = () => {
             </Row>
           </Col>
         </Row>
-
       </div>
     </div>
   )
 }
 
-export default Login
+export default LoginPage

@@ -12,4 +12,14 @@
     padding-inline: 16px;
     width: 100%;
   }
+
+  &-fluid {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    padding-inline-end: calc(var(--bs-gutter-x) * .5);
+    padding-inline-start: calc(var(--bs-gutter-x) * .5);
+    margin-inline-end: auto;
+    margin-inline-start: auto;
+  }
 }

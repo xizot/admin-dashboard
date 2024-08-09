@@ -1,0 +1,31 @@
+.scroll-to-top {
+  position: fixed;
+  z-index: 103;
+  bottom: 2rem;
+  right: 2rem;
+
+  .ant-btn {
+    border: 2px solid var(--primary-color);
+    background-color: var(--primary02);
+
+    &:hover {
+      background-color: var(--primary03) !important;
+    }
+  }
+
+  .anticon-arrow-up {
+    width: 14px;
+    height: 14px;
+    border-radius: 14px;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ant-btn-icon svg {
+    fill: #fff;
+    width: 10px;
+    height: 10px;
+  }
+}

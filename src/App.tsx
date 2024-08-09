@@ -7,6 +7,8 @@ import AppRoutes from './routes'
 import { store } from './store'
 import { login } from './store/reducers/auth.reducer'
 import { setTheme } from './store/reducers/theme.reducer'
+import AppConfigs from './components/AppConfigs'
+import ScrollToTop from './components/ScrollToTop'
 
 const isAuthenticated = !!localStorage.getItem(LocalStorageKeys.IsAuthenticated)
 const user = localStorage.getItem(LocalStorageKeys.User)
@@ -24,6 +26,8 @@ function App() {
   return (
     <Provider store={store}>
       <ThemeProvider>
+        <ScrollToTop />
+        <AppConfigs />
         <ToastContainer />
         <AppRoutes />
       </ThemeProvider>

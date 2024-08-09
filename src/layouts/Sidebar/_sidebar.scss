@@ -1,0 +1,21 @@
+.sidebar {
+  width: 5rem;
+  height: 100%;
+  background: var(--menu-bg);
+  border-inline-end: 1px solid var(--menu-border-color);
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  z-index: 103;
+  transition: all .1s ease-out;
+
+  p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+[data-show-sidebar='show'] {
+  .sidebar {
+    width: 15rem;
+  }
+}

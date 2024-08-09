@@ -1,8 +1,6 @@
 import { ThemeConfig } from 'antd'
 import { ThemeMode, ThemeModeType } from '../constants/themeMode'
 
-
-
 const customDarkTheme: ThemeConfig = {
   token: {
     colorPrimary: '#8e54e9',
@@ -14,13 +12,9 @@ const customLightTheme: ThemeConfig = {
   token: {
     colorPrimary: '#8e54e9',
   },
-  components: {
-  }
+  components: {},
 }
 
 export const getCurrentTheme = (themeMode: ThemeModeType): ThemeConfig => {
-  const darkMode = themeMode === ThemeMode.Dark
-  document.body.setAttribute('data-theme', darkMode ? 'dark' : '')
-
-  return !darkMode ? customLightTheme : customDarkTheme
+  return themeMode === ThemeMode.Dark ? customLightTheme : customDarkTheme
 }
