@@ -1,0 +1,39 @@
+.ant-drawer {
+  .setting-drawer {
+    background: var(--custom-white);
+    .ant-drawer-body {
+      padding: 0;
+    }
+    .ant-drawer-header {
+      .ant-drawer-title,
+      .ant-drawer-close {
+        color: var(--default-text-color);
+      }
+    }
+    &__tabs {
+      border-block-start: 1px solid var(--default-border);
+      border-block-end: 1px solid var(--default-border);
+    }
+    &__tab {
+      &__btn {
+        padding: 0.5rem 1rem;
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        color: var(--default-text-color) !important;
+        font-weight: 600;
+        width: 100%;
+
+        &:hover {
+          background: transparent !important;
+        }
+
+        &.active {
+          color: rgb(var(--success-rgb)) !important;
+          background-color: rgba(var(--success-rgb), 0.2) !important;
+          border-color: transparent !important;
+        }
+      }
+    }
+  }
+}

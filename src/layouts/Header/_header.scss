@@ -7,7 +7,7 @@
   inset-inline: 0;
   background: var(--header-bg);
   border-block-end: 1px solid var(--header-border-color);
-  padding-left: 5rem;
+  padding-left: 15rem;
 
   &__main-content {
     display: flex;
@@ -34,9 +34,9 @@
     font-size: 1.25rem;
     color: var(--header-prime-color);
     fill: var(--header-prime-color);
-    transition: all ease .05s;
+    transition: all ease 0.05s;
     position: relative;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 50%;
     cursor: pointer;
 
@@ -51,9 +51,11 @@
     }
   }
 }
-
-[data-show-sidebar='show'] {
+//================================================================
+//▼ Header Position ▼
+[data-header-position='scrollable'] {
   .header {
-    padding-left: 15rem;
+    position: relative;
   }
 }
+//▲ Header Position ▲

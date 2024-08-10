@@ -3,7 +3,8 @@ import Header from '../Header'
 import Sidebar from '../Sidebar'
 import Footer from '../Footer'
 import './_mainLayout.scss'
-import BreadCrumb from '../../components/Breadcrumb'
+import SettingDrawer from '../../components/SettingDrawer'
+import MainLayoutBreadcrumb from './MainLayoutBreadcrumb'
 
 type MainLayoutProps = {
   children: React.ReactNode
@@ -14,10 +15,11 @@ const MainLayout = ({ children }: MainLayoutProps) => {
     <div className="main-layout">
       <Header />
       <Sidebar />
-      <BreadCrumb />
+      <MainLayoutBreadcrumb />
       <main className="main-layout__content">
         <div className="container-fluid">{children}</div>
       </main>
+      <SettingDrawer />
       <Footer />
     </div>
   )

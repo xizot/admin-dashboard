@@ -1,0 +1,24 @@
+.setting-drawer {
+  overflow: hidden !important;
+  .ant-drawer-footer {
+    padding: 0;
+  }
+}
+.setting-drawer-footer {
+  padding: 0.8rem 1.5rem;
+  border-block-start: 1px solid var(--default-border);
+  &__item {
+    display: flex;
+    justify-content: center;
+  }
+  &__reset {
+    background-color: rgb(var(--danger-rgb)) !important;
+    border-color: rgb(var(--danger-rgb)) !important;
+    color: #fff !important;
+  }
+  &__portfolio {
+    background-color: rgb(var(--secondary-rgb)) !important;
+    border-color: rgb(var(--secondary-rgb)) !important;
+    color: #fff !important;
+  }
+}

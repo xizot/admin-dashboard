@@ -1,0 +1,22 @@
+.setting-drawer {
+  & &-item {
+    &__title {
+      font-size: 0.8rem;
+      font-weight: 600;
+      background-color: rgb(var(--light-rgb));
+      padding: 0.3125rem 0.625rem;
+      margin-bottom: 0;
+    }
+    &__options {
+      padding: 0.8rem 1.5rem;
+      width: 100%;
+    }
+    &__row {
+      label {
+        color: var(--default-text-color);
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+    }
+  }
+}

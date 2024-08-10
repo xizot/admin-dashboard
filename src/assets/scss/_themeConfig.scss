@@ -1,0 +1,12 @@
+//================================================================
+//▼ Page Styles ▼
+body {
+  background-color: var(--default-body-bg-color);
+}
+
+[data-page-style='classic'] {
+  body {
+    background-color: var(--custom-white);
+  }
+}
+//▲ Page Styles▲

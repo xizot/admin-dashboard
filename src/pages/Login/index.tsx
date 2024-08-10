@@ -21,7 +21,7 @@ const mockUsers: User[] = [
   },
 ]
 
-const LoginPage = () => {
+const Login = () => {
   const dispatch = useAppDispatch()
   const { goBack } = useHistory()
   const { control, handleSubmit } = useForm<LoginFormValues>({
@@ -35,9 +35,7 @@ const LoginPage = () => {
 
   const onSubmit = (data: LoginFormValues) => {
     const { username, password } = data
-    const user = mockUsers.find(
-      (user) => user.username === username && user.password === password
-    )
+    const user = mockUsers.find((user) => user.username === username && user.password === password)
     if (!user) {
       ToastHelper.Error('Invalid username or password')
       return
@@ -55,10 +53,7 @@ const LoginPage = () => {
           <Col span={16}>
             <Row justify="center">
               <Col sm={24} md={12}>
-                <LoginForm
-                  control={control}
-                  onSubmit={handleSubmit(onSubmit)}
-                />
+                <LoginForm control={control} onSubmit={handleSubmit(onSubmit)} />
               </Col>
               <Col sm={0} md={12}>
                 <LoginAds />
@@ -71,4 +66,4 @@ const LoginPage = () => {
   )
 }
 
-export default LoginPage
+export default Login

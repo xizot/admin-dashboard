@@ -1,24 +1,13 @@
+@import '../../assets/scss/breakpoint';
 .main-layout {
   &__content {
-    margin-left: 5rem;
+    margin-left: 15rem;
     min-height: calc(100vh - 12rem);
     margin-block-end: 0;
-    margin-block-start: 3.15rem;
+    margin-block-start: 4rem;
     position: relative;
     z-index: 1;
-  }
-
-  .breadcrumb {
-    position: relative;
-    margin: 0 0 -24px;
-    padding: .2rem 1.45rem 3rem 6.4rem;
-    top: 4rem;
-  }
-}
-
-[data-show-sidebar='show'] {
-  .main-layout__content {
-    margin-left: 15rem;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -31,5 +20,28 @@ html {
     /* Remove scrollbar space */
     background: transparent;
     /* Optional: just make scrollbar invisible */
+  }
+}
+
+[data-header-position='scrollable'] {
+  .main-layout {
+    &__content {
+      margin-block-start: 0;
+    }
+  }
+}
+
+[data-nav-layout='horizontal'] {
+  .main-layout {
+    &__content {
+      margin-block-start: 6.4rem;
+    }
+  }
+}
+[data-header-position='scrollable'][data-nav-layout='horizontal'] {
+  .main-layout {
+    &__content {
+      margin-block-start: 0;
+    }
   }
 }

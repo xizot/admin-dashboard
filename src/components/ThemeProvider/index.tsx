@@ -1,16 +1,31 @@
 import React from 'react'
-import { getCurrentTheme } from '../../helpers/theme.helper'
 import { ConfigProvider } from 'antd'
-import { useAppSelector } from '../../hooks/redux.hook'
 
 type ThemeProviderProps = {
   children: React.ReactNode
 }
 
 const ThemeProvider = ({ children }: ThemeProviderProps) => {
-  const themeMode = useAppSelector((state) => state.theme).themeMode
   return (
-    <ConfigProvider theme={getCurrentTheme(themeMode)}>
+    <ConfigProvider
+      theme={{
+        cssVar: {
+          prefix: 'custom',
+        },
+        token: {
+          colorPrimary: '#8e54e9',
+        },
+        components: {
+          Button: {
+            colorPrimary: 'var(--primary-color)',
+            colorError: 'var(--error-color)',
+          },
+          Typography: {
+            colorText: 'var(--default-text-color)',
+          },
+        },
+      }}
+    >
       <div>{children}</div>
     </ConfigProvider>
   )

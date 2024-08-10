@@ -17,9 +17,27 @@
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     width: 100%;
-    padding-inline-end: calc(var(--bs-gutter-x) * .5);
-    padding-inline-start: calc(var(--bs-gutter-x) * .5);
+    padding-inline-end: calc(var(--bs-gutter-x) * 0.5);
+    padding-inline-start: calc(var(--bs-gutter-x) * 0.5);
     margin-inline-end: auto;
     margin-inline-start: auto;
+  }
+}
+
+.desktop-only {
+  @include breakpoint(xl) {
+    display: none;
+  }
+}
+
+.tablet-only {
+  @include breakpoint(992px) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  @include breakpoint(sm) {
+    display: none;
   }
 }

@@ -1,0 +1,52 @@
+@import '../../../assets/scss/breakpoint';
+
+.main-layout__breadcrumb {
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 115px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background: var(--header-bg);
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  margin: 0 0 -32px;
+  padding: 0.2rem 0 3rem 15rem;
+  top: 4rem;
+  @include breakpoint(md) {
+    top: 3.7rem;
+    padding-inline: 1.5rem;
+  }
+}
+
+//▼ Breadcrumb ▼
+[data-show-sidebar='hide'] {
+  .main-layout__breadcrumb {
+    padding-left: 5rem;
+    @include breakpoint(md) {
+      padding-left: 0;
+    }
+  }
+}
+
+[data-nav-layout='horizontal'] {
+  .main-layout__breadcrumb {
+    top: 6.7rem;
+    padding-inline: 0;
+  }
+  .container-fluid {
+    max-width: 94%;
+    @include breakpoint(md) {
+      max-width: 100%;
+    }
+  }
+}
+
+[data-header-position='scrollable'] {
+  .main-layout__breadcrumb {
+    top: 0;
+  }
+}
+//▲ Breadcrumb ▲

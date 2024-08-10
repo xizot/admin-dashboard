@@ -1,0 +1,54 @@
+[data-theme-mode='dark'] {
+  --body-bg-rgb: 38, 44, 60;
+  --menu-border-color: rgba(255, 255, 255, 0.1);
+  --menu-prime-color: rgba(255, 255, 255, 0.6);
+  --custom-white: rgb(var(--body-bg-rgb));
+  --custom-black: #fff;
+  --default-border: rgba(255, 255, 255, 0.1);
+  --default-text-color: rgba(255, 255, 255, 0.7);
+  --light-rgb: 47, 52, 66;
+  --dark-rgb: 240, 245, 248;
+  --bootstrap-card-border: rgba(255, 255, 255, 0.1);
+  --list-hover-focus-bg: rgba(255, 255, 255, 0.1);
+  --default-background: rgba(255, 255, 255, 0.1);
+  --default-body-bg-color: rgb(var(--body-bg-rgb), 0.95);
+  --text-muted: rgba(255, 255, 255, 0.5);
+  --input-border: #3b4152;
+  --form-control-bg: #262c3c;
+  --gray-1: rgba(0, 0, 0, 0.1);
+  --gray-2: #17171c;
+  --gray-3: #393946;
+  --gray-4: #505062;
+  --gray-5: #73738c;
+  --gray-6: #8f8fa3;
+  --gray-7: #ababba;
+  --gray-8: #c7c7d1;
+  --gray-9: #e3e3e8;
+  --white-1: rgba(0, 0, 0, 0.1);
+  --white-2: rgba(0, 0, 0, 0.2);
+  --white-3: rgba(0, 0, 0, 0.3);
+  --white-4: rgba(0, 0, 0, 0.4);
+  --white-5: rgba(0, 0, 0, 0.5);
+  --white-6: rgba(0, 0, 0, 0.6);
+  --white-7: rgba(0, 0, 0, 0.7);
+  --white-8: rgba(0, 0, 0, 0.8);
+  --white-9: rgba(0, 0, 0, 0.9);
+  --black-1: rgba(255, 255, 255, 0.1);
+  --black-2: rgba(255, 255, 255, 0.2);
+  --black-3: rgba(255, 255, 255, 0.3);
+  --black-4: rgba(255, 255, 255, 0.4);
+  --black-5: rgba(255, 255, 255, 0.5);
+  --black-6: rgba(255, 255, 255, 0.6);
+  --black-7: rgba(255, 255, 255, 0.7);
+  --black-8: rgba(255, 255, 255, 0.8);
+  --black-9: rgba(255, 255, 255, 0.9);
+  --bs-border-color-translucent: rgba(0, 0, 0, 0.175);
+  --bs-border-color: var(--bs-border-color-translucent);
+  --menu-prime-color: rgb(171, 184, 199);
+  --menu-prime-icon-color: rgb(130, 145, 164);
+}
+
+[data-menu-style='dark'] {
+  --menu-border-color: rgba(255, 255, 255, 0.1);
+  --menu-bg: rgb(38, 44, 60);
+}

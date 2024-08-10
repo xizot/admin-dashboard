@@ -6,28 +6,30 @@ import { LocalStorageKeys } from './constants/localStorageKeys'
 import AppRoutes from './routes'
 import { store } from './store'
 import { login } from './store/reducers/auth.reducer'
-import { setTheme } from './store/reducers/theme.reducer'
-import AppConfigs from './components/AppConfigs'
+import ThemeConfig from './common/ThemeConfig'
 import ScrollToTop from './components/ScrollToTop'
+import { updateThemeConfig } from './store/reducers/appConfig.reducer'
+import SettingDrawer from './components/SettingDrawer'
 
 const isAuthenticated = !!localStorage.getItem(LocalStorageKeys.IsAuthenticated)
 const user = localStorage.getItem(LocalStorageKeys.User)
-const themeMode = localStorage.getItem(LocalStorageKeys.ThemeMode)
+const appConfig = localStorage.getItem(LocalStorageKeys.AppConfig)
 
 if (isAuthenticated && user) {
   store.dispatch(login(JSON.parse(user)))
 }
 
-if (themeMode) {
-  store.dispatch(setTheme(themeMode))
+if (appConfig) {
+  store.dispatch(updateThemeConfig(JSON.parse(appConfig)))
 }
 
 function App() {
   return (
     <Provider store={store}>
       <ThemeProvider>
+        <ThemeConfig />
+        <SettingDrawer />
         <ScrollToTop />
-        <AppConfigs />
         <ToastContainer />
         <AppRoutes />
       </ThemeProvider>
