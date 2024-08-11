@@ -1,0 +1,29 @@
+.related-app-item {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgb(var(--light-rgb));
+  }
+
+  &.card {
+    margin-bottom: 0 !important;
+  }
+
+  &__icon {
+    margin-bottom: 0.5rem;
+    svg {
+      width: 1.125rem;
+      height: 1.125rem;
+    }
+  }
+
+  &__title {
+    font-size: 0.8125rem;
+    font-weight: 600;
+  }
+}

@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import PrivateRoute from './PrivateRoute'
 import { useAppSelector } from '../hooks/redux.hook'
-import MainLayoutBreadcrumb from '../layouts/MainLayout'
+import MainLayout from '../layouts/MainLayout'
 import { lazy } from 'react'
 const LoginPage = lazy(() => import('../pages/Login'))
 const HomePage = lazy(() => import('../pages/Home'))
@@ -11,7 +11,7 @@ const AppRoutes: React.FC = () => {
 
   return (
     <BrowserRouter>
-      <MainLayoutBreadcrumb>
+      <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<>Test</>} />
@@ -20,7 +20,7 @@ const AppRoutes: React.FC = () => {
           </Route>
           <Route path="/login" element={<LoginPage />} />
         </Routes>
-      </MainLayoutBreadcrumb>
+      </MainLayout>
     </BrowserRouter>
   )
 }

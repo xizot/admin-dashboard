@@ -5,13 +5,11 @@ import { HeaderPosition, MenuPosition, NavigationStyle, PageStyle, ThemeConfig, 
 
 type AppState = {
   openSideBar: boolean
-  openSettingDrawer: boolean
   themeConfig: ThemeConfig
 }
 
 const initialState: AppState = {
   openSideBar: true,
-  openSettingDrawer: false,
   themeConfig: {
     themeMode: ThemeMode.Dark,
     navLayout: NavigationStyle.Vertical,
@@ -37,20 +35,10 @@ const appConfigSlice = createSlice({
       state.themeConfig.themeMode = state.themeConfig.themeMode === ThemeMode.Light ? ThemeMode.Dark : ThemeMode.Light
       saveThemeConfigToLocalStorage(state.themeConfig)
     },
-    openSettingDrawer(state) {
-      state.openSettingDrawer = true
-      saveThemeConfigToLocalStorage(state.themeConfig)
-    },
-    closeSettingDrawer(state) {
-      state.openSettingDrawer = false
-      saveThemeConfigToLocalStorage(state.themeConfig)
-    },
-    updateThemeConfig(state, action: PayloadAction<ThemeConfig & { openSettingDrawer?: boolean }>) {
-      const { openSettingDrawer, ...rest } = action.payload
+
+    updateThemeConfig(state, action: PayloadAction<ThemeConfig>) {
+      const { ...rest } = action.payload
       state.themeConfig = _.merge(state.themeConfig, rest)
-      if (!_.isNil(openSettingDrawer)) {
-        state.openSettingDrawer = openSettingDrawer
-      }
       saveThemeConfigToLocalStorage(state.themeConfig)
     },
     updateThemeConfigItem(state, action: PayloadAction<{ id: keyof ThemeConfig; value: string }>) {
@@ -65,6 +53,5 @@ const appConfigSlice = createSlice({
   },
 })
 
-export const { toggleSideBar, resetThemeConfig, openSettingDrawer, closeSettingDrawer, updateThemeConfig, updateThemeConfigItem, toggleThemeMode } =
-  appConfigSlice.actions
+export const { toggleSideBar, resetThemeConfig, updateThemeConfig, updateThemeConfigItem, toggleThemeMode } = appConfigSlice.actions
 export default appConfigSlice.reducer

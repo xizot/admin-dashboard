@@ -1,7 +1,7 @@
 import { Button, Col, Drawer, Row } from 'antd'
 import { ThemeConfig, themeConfigs } from '../../constants/themeConfig'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux.hook'
-import { closeSettingDrawer, updateThemeConfig } from '../../store/reducers/appConfig.reducer'
+import { updateThemeConfig } from '../../store/reducers/appConfig.reducer'
 import SettingDrawerItem from '../SettingDrawerItem'
 import './_settingDrawer.scss'
 import { useState } from 'react'
@@ -25,8 +25,13 @@ const tabs = [
   },
 ]
 
-const SettingDrawer = () => {
-  const { openSettingDrawer, themeConfig } = useAppSelector((state) => state.appConfig)
+type SettingDrawerProps = {
+  open: boolean
+  onClose: () => void
+}
+
+const SettingDrawer = ({ open, onClose }: SettingDrawerProps) => {
+  const { themeConfig } = useAppSelector((state) => state.appConfig)
   const [activeTab, setActiveTab] = useState<TabType>(Tab.ThemeStyles)
 
   const dispatch = useAppDispatch()
@@ -35,16 +40,12 @@ const SettingDrawer = () => {
     setActiveTab(tabId)
   }
 
-  const handleCloseSettingDrawer = () => {
-    dispatch(closeSettingDrawer())
-  }
-
   const handleChangeConfig = (id: string, value: string) => {
     dispatch(updateThemeConfig({ ...themeConfig, [id]: value }))
   }
 
   return (
-    <Drawer onClose={handleCloseSettingDrawer} open={openSettingDrawer} title="Switcher" className="setting-drawer" footer={<SettingDrawerFooter />}>
+    <Drawer onClose={onClose} open={open} title="Switcher" className="setting-drawer white-drawer" footer={<SettingDrawerFooter />}>
       <Row className="setting-drawer__tabs">
         {tabs.map((tab) => (
           <Col key={tab.id} span={24 / tabs.length}>

@@ -1,22 +1,22 @@
 import {
-  AppstoreOutlined,
   BellOutlined,
   FullscreenExitOutlined,
   FullscreenOutlined,
   GlobalOutlined,
   MenuOutlined,
   MoonOutlined,
-  SettingOutlined,
   ShoppingCartOutlined,
   SunOutlined,
   WechatOutlined,
 } from '@ant-design/icons'
 import { ThemeMode } from '../../constants/themeConfig'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux.hook'
-import { openSettingDrawer, toggleSideBar, toggleThemeMode } from '../../store/reducers/appConfig.reducer'
+import { toggleSideBar, toggleThemeMode } from '../../store/reducers/appConfig.reducer'
 import './_header.scss'
 import HeaderSearch from './HeaderSearch'
 import useFullScreen from '../../hooks/useFullScreen.hook'
+import HeaderRelatedApp from './HeaderRelatedApp'
+import HeaderSetting from './HeaderSetting'
 
 const Header = () => {
   const dispatch = useAppDispatch()
@@ -25,10 +25,6 @@ const Header = () => {
 
   const handleToggleTheme = () => {
     dispatch(toggleThemeMode())
-  }
-
-  const handleOpenSettingDrawer = () => {
-    dispatch(openSettingDrawer())
   }
 
   const handleToggleSidebar = () => {
@@ -64,7 +60,7 @@ const Header = () => {
             <BellOutlined className="header__link-icon" />
           </div>
           <div className="header__element desktop-only">
-            <AppstoreOutlined className="header__link-icon" />
+            <HeaderRelatedApp />
           </div>
           <div className="header__element desktop-only">
             {isFullScreen ? (
@@ -82,7 +78,7 @@ const Header = () => {
             </div>
           </div>
           <div className="header__element">
-            <SettingOutlined spin className="header__link-icon" onClick={handleOpenSettingDrawer} />
+            <HeaderSetting />
           </div>
         </div>
       </div>

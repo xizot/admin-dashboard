@@ -31,10 +31,15 @@
   width: 100%;
 }
 
+.border {
+  border: 1px solid var(--default-border);
+}
+
 [data-page-style='classic'] .card {
   box-shadow: none;
   border-color: var(--default-border);
 }
+
 .overlay {
   position: fixed;
   width: 100vw;
@@ -45,4 +50,29 @@
   z-index: 102;
   pointer-events: all;
   display: none;
+}
+.avatar {
+  position: relative;
+  height: 2.625rem;
+  width: 2.625rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  color: #fff;
+  font-weight: 500;
+}
+.ant-drawer {
+  .white-drawer {
+    background: var(--custom-white);
+    .ant-drawer-header {
+      border-bottom: 1px solid var(--default-border);
+    }
+  }
+  .ant-drawer-header {
+    .ant-drawer-close,
+    .ant-drawer-title {
+      color: var(--default-text-color);
+    }
+  }
 }

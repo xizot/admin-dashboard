@@ -9,7 +9,6 @@ import { login } from './store/reducers/auth.reducer'
 import ThemeConfig from './common/ThemeConfig'
 import ScrollToTop from './components/ScrollToTop'
 import { updateThemeConfig } from './store/reducers/appConfig.reducer'
-import SettingDrawer from './components/SettingDrawer'
 
 const isAuthenticated = !!localStorage.getItem(LocalStorageKeys.IsAuthenticated)
 const user = localStorage.getItem(LocalStorageKeys.User)
@@ -28,7 +27,6 @@ function App() {
     <Provider store={store}>
       <ThemeProvider>
         <ThemeConfig />
-        <SettingDrawer />
         <ScrollToTop />
         <ToastContainer />
         <AppRoutes />

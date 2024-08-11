@@ -335,3 +335,39 @@
 .text-primary005 {
   color: var(--primary005);
 }
+
+.bg-success-transparent,
+.bg-success-transparent:hover {
+  background-color: rgba(var(--success-rgb), 0.2) !important;
+  color: rgb(var(--success-rgb)) !important;
+}
+
+.bg-info-transparent,
+.bg-info-transparent:hover {
+  background-color: rgba(var(--info-rgb), 0.1) !important;
+  color: rgb(var(--info-rgb)) !important;
+}
+
+.bg-warning-transparent,
+.bg-warning-transparent:hover {
+  background-color: rgba(var(--warning-rgb), 0.2) !important;
+  color: rgb(var(--warning-rgb)) !important;
+}
+
+.bg-pink-transparent,
+.bg-pink-transparent:hover {
+  background-color: rgba(var(--pink-rgb), 0.1) !important;
+  color: rgb(var(--pink-rgb)) !important;
+}
+
+.bg-secondary-transparent,
+.bg-secondary-transparent:hover {
+  background-color: rgba(var(--secondary-rgb), 0.1) !important;
+  color: rgb(var(--secondary-rgb)) !important;
+}
+
+.bg-teal-transparent,
+.bg-teal-transparent:hover {
+  background-color: rgba(var(--teal-rgb), 0.1) !important;
+  color: rgb(var(--teal-rgb)) !important;
+}
