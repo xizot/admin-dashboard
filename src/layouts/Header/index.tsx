@@ -1,14 +1,4 @@
-import {
-  BellOutlined,
-  FullscreenExitOutlined,
-  FullscreenOutlined,
-  GlobalOutlined,
-  MenuOutlined,
-  MoonOutlined,
-  ShoppingCartOutlined,
-  SunOutlined,
-  WechatOutlined,
-} from '@ant-design/icons'
+import { FullscreenExitOutlined, FullscreenOutlined, MenuOutlined, MoonOutlined, SunOutlined, WechatOutlined } from '@ant-design/icons'
 import { ThemeMode } from '../../constants/themeConfig'
 import { useAppDispatch, useAppSelector } from '../../hooks/redux.hook'
 import { toggleSideBar, toggleThemeMode } from '../../store/reducers/appConfig.reducer'
@@ -17,6 +7,10 @@ import HeaderSearch from './HeaderSearch'
 import useFullScreen from '../../hooks/useFullScreen.hook'
 import HeaderRelatedApp from './HeaderRelatedApp'
 import HeaderSetting from './HeaderSetting'
+import HeaderLanguage from './HeaderLanguage'
+import HeaderCart from './HeaderCart'
+import HeaderNotification from './HeaderNotification'
+import HeaderProfile from './HeaderProfile'
 
 const Header = () => {
   const dispatch = useAppDispatch()
@@ -44,7 +38,7 @@ const Header = () => {
         </div>
         <div className="header__right">
           <div className="header__element">
-            <GlobalOutlined className="header__link-icon" />
+            <HeaderLanguage />
           </div>
           <div className="header__element">
             {themeMode === ThemeMode.Dark ? (
@@ -54,10 +48,10 @@ const Header = () => {
             )}
           </div>
           <div className="header__element desktop-only">
-            <ShoppingCartOutlined className="header__link-icon" />
+            <HeaderCart />
           </div>
           <div className="header__element desktop-only">
-            <BellOutlined className="header__link-icon" />
+            <HeaderNotification />
           </div>
           <div className="header__element desktop-only">
             <HeaderRelatedApp />
@@ -73,9 +67,7 @@ const Header = () => {
             <WechatOutlined className="header__link-icon" />
           </div>
           <div className="header__element user-profile">
-            <div>
-              <p>Harry Jones</p>
-            </div>
+            <HeaderProfile />
           </div>
           <div className="header__element">
             <HeaderSetting />

@@ -1,0 +1,17 @@
+.header-language-content {
+  width: 10rem;
+  box-shadow: 0 1rem 1.125rem #a9a9a959;
+  &__item {
+    display: block;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    &:hover {
+      color: var(--primary-color);
+      background-color: var(--primary005);
+    }
+  }
+}
+
+[data-theme-mode='dark'] .header-language-content {
+  box-shadow: 0 1rem 1.125rem #ffffff0d;
+}
