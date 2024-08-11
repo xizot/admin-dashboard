@@ -3,7 +3,6 @@ import Header from '../Header'
 import Sidebar from '../Sidebar'
 import Footer from '../Footer'
 import './_mainLayout.scss'
-import SettingDrawer from '../../components/SettingDrawer'
 import MainLayoutBreadcrumb from './MainLayoutBreadcrumb'
 
 type MainLayoutProps = {
@@ -19,7 +18,6 @@ const MainLayout = ({ children }: MainLayoutProps) => {
       <main className="main-layout__content">
         <div className="container-fluid">{children}</div>
       </main>
-      <SettingDrawer />
       <Footer />
     </div>
   )
