@@ -11,16 +11,16 @@ const AppRoutes: React.FC = () => {
 
   return (
     <BrowserRouter>
-      <MainLayout>
-        <Routes>
+      <Routes>
+        <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<>Test</>} />
           <Route element={<PrivateRoute isAuthenticated={isAuthenticated} />}>
             <Route path="/profile" element={<>Profile</>} />
           </Route>
-          <Route path="/login" element={<LoginPage />} />
-        </Routes>
-      </MainLayout>
+        </Route>
+        <Route path="/login" element={<LoginPage />} />
+      </Routes>
     </BrowserRouter>
   )
 }
