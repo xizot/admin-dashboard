@@ -34,7 +34,7 @@ const HeaderLanguageContent = ({ onClose }: HeaderLanguageContentProps) => {
       <ul>
         {languages.map((language) => (
           <li key={language.value}>
-            <span className="header-language-content__item" onClick={onClose}>
+            <span className="header-language-content__item text-default" onClick={onClose}>
               {language.label}
             </span>
           </li>

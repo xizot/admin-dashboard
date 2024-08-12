@@ -20,11 +20,11 @@ const CartItem = ({ image, title, price, originalPrice, quantity, onRemove }: Ca
         <img src={image} alt={title} />
       </div>
       <div className="cart-item__content">
-        <p className="cart-item__title">{title}</p>
-        <p className="cart-item__quantity">Quantity: {quantity}</p>
+        <p className="cart-item__title text-default">{title}</p>
+        <p className="cart-item__quantity text-default">Quantity: {quantity}</p>
         <div className="cart-item__price">
-          <p className="cart-item__price--current">${price}</p>
-          <p className="cart-item__price--original">${originalPrice}</p>
+          <p className="cart-item__price--current text-default">${price}</p>
+          <p className="cart-item__price--original text-default">${originalPrice}</p>
         </div>
       </div>
       <Button type="text" icon={<DeleteOutlined />} className="cart-item__remove" onClick={onRemove}></Button>

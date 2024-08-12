@@ -4,7 +4,7 @@ const Home = () => {
   return (
     <div className="home-page">
       <div className="card home-page__content">
-        <p>
+        <p className="text-default">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id temporibus aliquid eos qui nam hic, reiciendis maxime facilis perferendis laboriosam
           illum suscipit explicabo odio exercitationem quasi, optio numquam velit eaque commodi quis iure aperiam vel. Assumenda deserunt consequatur nemo,
           nihil maxime aspernatur quaerat iure ab velit nisi laboriosam exercitationem eveniet facilis cupiditate reiciendis sequi animi alias repellat autem
